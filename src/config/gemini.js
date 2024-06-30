@@ -40,12 +40,12 @@ async function runChat(prompt) {
     },
   ];
 
-  // if (history.length === 0) {
-  //   history.push({
-  //     role: "user",
-  //     parts: "Always give response in html format only",
-  //   });
-  // }
+  if (history.length === 0) {
+    history.push({
+      role: "user",
+      parts: "All the responses should be related to development purpose",
+    });
+  }
 
   console.log(history, "his1");
 

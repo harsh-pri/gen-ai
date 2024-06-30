@@ -72,7 +72,7 @@ const Main = () => {
     setFileText(extractedText);
     const input =
       extractedText +
-      "Convert this BRD to PRD in a formatted way in HTML format";
+      "create a detailed Product requirement document which contains it sub feature to help out developer team and business team understand the requirements. So that development team can understand their tasks, in around 600 words in a formatted way in HTML format";
     setInput(input);
   };
 
@@ -82,7 +82,7 @@ const Main = () => {
 
     const input =
       result.value +
-      "Convert this BRD to PRD in a formatted way in HTML format";
+      "create a detailed Product requirement document which contains it sub feature to help out developer team and business team understand the requirements. So that development team can understand their tasks, in around 600 words in a formatted way in HTML format";
     setInput(input);
   };
 
