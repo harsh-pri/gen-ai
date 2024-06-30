@@ -40,12 +40,12 @@ async function runChat(prompt) {
     },
   ];
 
-  // if (history.length === 0) {
-  //   history.push({
-  //     role: "user",
-  //     parts: "Always give response in html format only and without ```html```",
-  //   });
-  // }
+  if (history.length === 0) {
+    history.push({
+      role: "user",
+      parts: "Always give response in html format only",
+    });
+  }
 
   console.log(history, "his1");
 
@@ -69,7 +69,7 @@ async function runChat(prompt) {
   if (match) {
     return match[0];
   } else {
-    return "Please ask valid question.";
+    return response.text();
   }
 }
 
