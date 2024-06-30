@@ -40,12 +40,12 @@ async function runChat(prompt) {
     },
   ];
 
-  if (history.length === 0) {
-    history.push({
-      role: "user",
-      parts: "Always give response in html format only",
-    });
-  }
+  // if (history.length === 0) {
+  //   history.push({
+  //     role: "user",
+  //     parts: "Always give response in html format only",
+  //   });
+  // }
 
   console.log(history, "his1");
 
@@ -55,7 +55,8 @@ async function runChat(prompt) {
     history: history,
   });
 
-  const result = await chat.sendMessage(prompt);
+  const newPrompt = prompt + "Always give response in html format only";
+  const result = await chat.sendMessage(newPrompt);
   const response = result.response;
 
   history.push({ role: "user", parts: prompt });
